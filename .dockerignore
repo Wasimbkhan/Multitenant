@@ -1,0 +1,7 @@
+/node_modules
+/public/build
+/public/tenant_images
+/vendor
+/.fleet
+/.idea
+/.vscode
