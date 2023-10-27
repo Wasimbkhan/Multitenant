@@ -59,4 +59,4 @@ RUN php artisan config:clear
 RUN npm install
 RUN npm run build
 
-CMD bash -c "composer install"
+RUN composer install
