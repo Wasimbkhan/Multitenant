@@ -24,7 +24,7 @@ services:
             - "3306:3306"
         environment:
             MYSQL_DATABASE: crud_app_vue
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
         volumes:
