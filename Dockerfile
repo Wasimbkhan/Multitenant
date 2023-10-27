@@ -20,6 +20,9 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev
 
+# Install Composer globally
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -47,7 +50,7 @@ RUN chown -R $user:$user /var/www
 USER $user
 
 # Install composer
-RUN composer install
+RUN composer install --no-cache
 
 # Clear project cache and config cache
 RUN php artisan cache:clear 
