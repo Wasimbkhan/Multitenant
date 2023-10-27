@@ -59,4 +59,4 @@ RUN php artisan config:clear
 RUN npm install
 RUN npm run build
 
-CMD bash -c "composer install && php artisan serve --host 0.0.0.0 --port 5001"
+CMD bash -c "composer install"
