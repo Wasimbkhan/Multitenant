@@ -55,6 +55,7 @@ RUN composer install
 # Clear project cache and config cache
 RUN php artisan cache:clear 
 RUN php artisan config:clear
+RUN php artisan key:generate
 RUN php artisan migrate
 
 RUN npm install
