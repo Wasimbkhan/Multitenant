@@ -50,7 +50,7 @@ RUN chown -R $user:$user /var/www
 USER $user
 
 # Install composer
-RUN composer install --no-cache
+RUN composer install
 
 # Clear project cache and config cache
 RUN php artisan cache:clear 
@@ -59,4 +59,6 @@ RUN php artisan config:clear
 RUN npm install
 RUN npm run build
 
-RUN composer install
+
+
+
