@@ -1,6 +1,7 @@
 version: "3.7"
 services:
-        image: crdtenant
+    app:
+        image: myfirstproject:latest
         container_name: crdtenant-app
         restart: unless-stopped
         networks:
