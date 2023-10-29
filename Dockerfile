@@ -60,6 +60,6 @@ RUN php artisan key:generate
 RUN npm install
 RUN npm run build
 
-
+RUN php artisan migrate
 
 
